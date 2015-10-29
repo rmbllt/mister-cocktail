@@ -12,6 +12,11 @@ class DosesController < ApplicationController
       render :new
     end
   end
+  def destroy
+    @dose = Dose.find(params[:id])
+    @dose.destroy
+    redirect_to :back
+  end
 
 
 private
